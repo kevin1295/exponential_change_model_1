@@ -1,7 +1,6 @@
 ﻿// exponential_change_model_1.cpp : 此文件包含 "main" 函数。程序执行将在此处开始并结束。
 //
 
-// #include <bits/stdc++.h>									// difference between two editors
 #include <iostream>
 #include <math.h>
 #include <algorithm>
@@ -52,7 +51,6 @@ int main()
 	FILE* stream1;											// prepare to write into documents
 
 	freopen_s(&stream1, "out.txt", "w", stdout);
-	//	freopen("out.txt", "w", stdout);					// difference between two editors
 	for (int i = 1; i <= N; i++) {
 		for (int j = 1; j <= 51; j++) {
 			printf("%c", Ex[i].Statements[j] ? 'x' : 'o');
@@ -61,11 +59,9 @@ int main()
 	}
 
 	freopen_s(&stream1, "CON", "w", stdout);				// return to write in CMD
-//	freopen("CON", "w", stdout);
 	printf("--------------------results--------------------\n");
 
 	freopen_s(&stream1, "out1.txt", "w", stdout);
-	//	freopen("outex.txt","w",stdout);
 	for (int i = 1; i <= N; i++) {
 		for (int j = 50; j > 0; j--) {
 			if ((Ex[i].Statements[j] == false) && (Ex[i].Statements[j - 1] == true)) {
@@ -85,7 +81,7 @@ int main()
 	}
 
 	for (int i = 1; i <= N; i++) {
-		for (int j = 49; j > 0; j--) {
+		for (int j = 48; j > 0; j--) {
 			if ((Ex[i].Statements[j - 1] == true) && (Ex[i].Statements[j] == false) && (Ex[i].Statements[j + 1] == false) && (Ex[i].Statements[j + 2] == true)) {
 				Parkpoint[i][3] = j;
 				break;
@@ -93,7 +89,7 @@ int main()
 			if (j == 1) {
 				for (int j = 50; j > 0; j--) {
 					if (Ex[i].Statements[j] == false) {
-						Parkpoint[i][2] = 0 - j;
+						Parkpoint[i][3] = (t[2] - t[1]) / (t[1] + t[2]) * j;
 						break;
 					}
 				}
@@ -111,7 +107,6 @@ int main()
 		printf("%llf     %llf     %llf\n", Time[i][1], Time[i][2], Time[i][3]);
 	}
 	freopen_s(&stream1, "CON", "w", stdout);
-	//	freopen("CON", "w", stdout);
 	printf("Sum_time of 1 = %lf s\nand average is %lf s\n", Sum_time[1], Sum_time[1] / N);
 	printf("Sum_time of 2 = %lf s\nand average is %lf s\n", Sum_time[2], Sum_time[2] / N);
 	printf("Sum_time of 3 = %lf s\nand average is %lf s\n", Sum_time[3], Sum_time[3] / N);
