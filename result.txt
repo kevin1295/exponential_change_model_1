@@ -1,6 +1,6 @@
-Sum_time of 1 = 3487120.000000 s
-and average is 139.484800 s
-Sum_time of 2 = 5724240.000000 s
-and average is 228.969600 s
-Sum_time of 3 = 2510444.000000 s
-and average is 100.417760 s
+Sum_time of 1 = 3486400.000000 s
+and average is 139.456000 s
+Sum_time of 2 = 5722800.000000 s
+and average is 228.912000 s
+Sum_time of 3 = 2512902.000000 s
+and average is 100.516080 s

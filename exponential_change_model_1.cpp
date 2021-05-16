@@ -72,7 +72,7 @@ int main()
 	}
 
 	for (int i = 1; i <= N; i++) {
-		for (int j = 50; j > 0; j--) {
+		for (int j = 1; j <= 50; j++) {
 			if (Ex[i].Statements[j] == false) {
 				Parkpoint[i][2] = j;
 				break;
@@ -87,7 +87,7 @@ int main()
 				break;
 			}
 			if (j == 1) {
-				for (int j = 50; j > 0; j--) {
+				for (int j = 1; j <= 50; j++) {
 					if (Ex[i].Statements[j] == false) {
 						Parkpoint[i][3] = (t[2] - t[1]) / (t[1] + t[2]) * j;
 						break;
