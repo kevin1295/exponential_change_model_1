@@ -117,7 +117,6 @@ int main()
 	printf("Sum_time of 3 = %lf s\nand average is %lf s\n", Sum_time[3], Sum_time[3] / N);
 
 	freopen_s(&stream1, "CON", "w", stdout);
-	system("pause");
 
 	return 0;
 }
